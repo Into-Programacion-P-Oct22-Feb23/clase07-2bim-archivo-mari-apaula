@@ -7,6 +7,7 @@ package manejoarray;
 
 // import java.util.ArrayList;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -15,9 +16,10 @@ import java.util.ArrayList;
 public class ArrayList01 {
 
     public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
 
         // creación de un ArrayList
-        ArrayList<Integer> arreglo = new ArrayList<>();
+        /*ArrayList<Integer> arreglo = new ArrayList<>();
 
         arreglo.add(10);
         arreglo.add(20);
@@ -27,7 +29,7 @@ public class ArrayList01 {
         arreglo.add(60);
         arreglo.add(1000);
         arreglo.add(2000);
-        arreglo.add(3000);
+        arreglo.add(3000);// investigar para que sirven los tipos despuedel punto
 
         for (int i = 0; i < arreglo.size(); i++) {
             System.out.println(arreglo.get(i));
@@ -44,12 +46,30 @@ public class ArrayList01 {
 
         for (int i = 0; i < arreglo3.size(); i++) {
             System.out.println(arreglo3.get(i));
-        }
+        }*/
 
         System.out.println("----------------------------------");
         ArrayList<String> arreglo2 = new ArrayList<>();
-
+        boolean bandera = true;
+        String pais;
         
+        while (bandera){
+            System.out.println("Ingrese el nombre de un pais");
+            pais = entrada.nextLine();
+            arreglo2.add(pais);
+            System.out.println("Ingrese y para salir");
+            String letra = entrada.nextLine();
+            
+            if (letra.equals("y")){
+                bandera = false;
+            }
+ 
+        }
+        
+        System.out.println("Los paises ingresados son\n");
+        for(int i = 0; i < arreglo2.size(); i++){
+            System.out.println(arreglo2.get(i));
+        }
         
         /*
         ArrayList <String> arreglo2 = new ArrayList<>();
